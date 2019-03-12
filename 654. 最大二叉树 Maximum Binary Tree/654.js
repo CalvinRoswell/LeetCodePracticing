@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -16,4 +17,24 @@ var constructMaximumBinaryTree = function(nums) {
     answer.left = constructMaximumBinaryTree(nums.slice(0, index));
     answer.right = constructMaximumBinaryTree(nums.slice(index + 1));
     return answer;
+=======
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {number[]} nums
+ * @return {TreeNode}
+ */
+var constructMaximumBinaryTree = function(nums) {
+    if(nums.length == 0) return null;
+    var index = nums.indexOf(Math.max(...nums));
+    var answer = new TreeNode(nums[index]);
+    answer.left = constructMaximumBinaryTree(nums.slice(0, index));
+    answer.right = constructMaximumBinaryTree(nums.slice(index + 1));
+    return answer;
+>>>>>>> 89f709a1ed67f322bd9b0ae462cfe34ffaebd882
 };
