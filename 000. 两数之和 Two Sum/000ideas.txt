@@ -1,0 +1,11 @@
+000.ideas
+ → 方法1，暴力搜索完成 O(N^2)/O(1) → C#, JS
+要点：
+1.JS可以学习注释方式：
+@param {number[]} nums // 参数，与输入格式
+@param {number} target
+@return {number[]} //结果格式
+var twoSum = function(nums, target)
+
+2.C#要求函数必须有返回值，所以在无法正常得到返回值的分支(例如函数末)要带上"throw new exception(XXX)"
+C#为强类型语言，不要用了return false习惯了转不回来
